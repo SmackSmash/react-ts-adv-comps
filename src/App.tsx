@@ -1,7 +1,7 @@
 import Input from './components/Input';
 
 const App = () => {
-  return <Input name='firstname' label='First Name:' />;
+  return <Input label='First Name:' id='firstname' type='text' />;
 };
 
 export default App;

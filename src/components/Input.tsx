@@ -1,19 +1,19 @@
 interface InputProps {
-  name: string;
   label: string;
+  id: string;
+  type: 'text' | 'search' | 'number';
 }
 
-const Input = ({ name, label }: InputProps) => {
+const Input = ({ label, id, type }: InputProps) => {
   return (
     <span>
-      <label className='mr-4' htmlFor={name}>
+      <label className='mr-4' htmlFor={id}>
         {label}
       </label>
       <input
         className='bg-zinc-950 p-2 border-2 border-zinc-200 outline-none'
-        type='text'
-        name={name}
-        id={name}
+        type={type}
+        id={id}
       />
     </span>
   );
