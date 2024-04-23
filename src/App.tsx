@@ -1,3 +1,4 @@
+import Button from './components/Button';
 import Input from './components/Input';
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
       <Input label='First Name:' id='firstname' type='text' />
       <Input label='Last Name:' id='lastname' type='text' />
       <Input label='Age:' id='age' type='number' />
+      <Button>Click Me</Button>
     </main>
   );
 };
