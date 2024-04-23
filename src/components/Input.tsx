@@ -1,10 +1,11 @@
-interface InputProps {
+import { ComponentPropsWithoutRef } from 'react';
+
+interface InputProps extends ComponentPropsWithoutRef<'input'> {
   label: string;
   id: string;
-  type: 'text' | 'search' | 'number';
 }
 
-const Input = ({ label, id, type }: InputProps) => {
+const Input = ({ label, id, ...props }: InputProps) => {
   return (
     <span className='flex flex-col w-full my-2'>
       <label className='mr-4 mb-2' htmlFor={id}>
@@ -12,8 +13,8 @@ const Input = ({ label, id, type }: InputProps) => {
       </label>
       <input
         className='bg-zinc-950 p-2 border-2 border-zinc-200 outline-none'
-        type={type}
         id={id}
+        {...props}
       />
     </span>
   );
