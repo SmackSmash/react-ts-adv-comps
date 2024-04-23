@@ -1,7 +1,13 @@
 import Input from './components/Input';
 
 const App = () => {
-  return <Input label='First Name:' id='firstname' type='text' />;
+  return (
+    <main className='flex flex-col w-1/2 p-4'>
+      <Input label='First Name:' id='firstname' type='text' />
+      <Input label='Last Name:' id='lastname' type='text' />
+      <Input label='Age:' id='age' type='number' />
+    </main>
+  );
 };
 
 export default App;

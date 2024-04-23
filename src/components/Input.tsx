@@ -6,8 +6,8 @@ interface InputProps {
 
 const Input = ({ label, id, type }: InputProps) => {
   return (
-    <span>
-      <label className='mr-4' htmlFor={id}>
+    <span className='flex flex-col w-full my-2'>
+      <label className='mr-4 mb-2' htmlFor={id}>
         {label}
       </label>
       <input
