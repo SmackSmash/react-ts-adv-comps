@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
+import { type ComponentPropsWithoutRef, type PropsWithChildren } from 'react';
 
 type ButtonProps = PropsWithChildren<{
   el: 'button';
