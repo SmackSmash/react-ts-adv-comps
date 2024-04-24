@@ -11,14 +11,12 @@ type LinkProps = PropsWithChildren<{
   ComponentPropsWithoutRef<'a'>;
 
 const Button = (props: ButtonProps | LinkProps) => {
-  const { el, ...otherProps } = props;
-
-  if (el === 'anchor') {
-    const { children, ...rest } = otherProps;
+  if (props.el === 'anchor') {
+    const { children, ...rest } = props;
     return <a {...rest}>{children}</a>;
   }
 
-  const { children, ...rest } = otherProps;
+  const { children, ...rest } = props;
   return (
     <button
       className='border-2 border-sky-800 bg-sky-600 py-2 hover:bg-sky-500'
