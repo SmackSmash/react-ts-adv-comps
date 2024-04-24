@@ -16,12 +16,12 @@ const Button = (props: ComponentProps) => {
     case 'button':
     default:
       return (
-        <button className='bg-sky-600 py-2 hover:bg-sky-500'>
+        <button className='border-2 border-sky-800 bg-sky-600 py-2 hover:bg-sky-500'>
           {props.children}
         </button>
       );
     case 'anchor':
-      return <a href={props.href}>{props.children}</a>;
+      return <a {...props}>{props.children}</a>;
   }
 };
 
