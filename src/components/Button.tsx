@@ -1,18 +1,20 @@
-import { PropsWithChildren } from 'react';
+import { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
 
 type ButtonProps = PropsWithChildren<{
   el: 'button';
-}>;
+}> &
+  ComponentPropsWithoutRef<'button'>;
 
 type LinkProps = PropsWithChildren<{
   el: 'anchor';
   href: string;
-}>;
+}> &
+  ComponentPropsWithoutRef<'a'>;
 
-type ComponentProps = ButtonProps | LinkProps;
+const Button = (props: ButtonProps | LinkProps) => {
+  const { el } = props;
 
-const Button = (props: ComponentProps) => {
-  switch (props.el) {
+  switch (el) {
     case 'button':
     default:
       return (
