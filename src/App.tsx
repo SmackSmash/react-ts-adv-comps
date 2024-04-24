@@ -7,7 +7,9 @@ const App = () => {
       <Input label='First Name:' id='firstname' type='text' />
       <Input label='Last Name:' id='lastname' type='text' />
       <Input label='Age:' id='age' type='number' />
-      <Button el='button'>Click Me</Button>
+      <Button el='button' onClick={() => alert('Clicked!')}>
+        Click Me
+      </Button>
       <Button el='anchor' href='/'>
         Go somewhere
       </Button>
