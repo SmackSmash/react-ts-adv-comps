@@ -13,7 +13,11 @@ type LinkProps = PropsWithChildren<{
 const Button = (props: ButtonProps | LinkProps) => {
   if (props.el === 'anchor') {
     const { children, ...rest } = props;
-    return <a {...rest}>{children}</a>;
+    return (
+      <a className='underline' {...rest}>
+        {children}
+      </a>
+    );
   }
 
   const { children, ...rest } = props;
